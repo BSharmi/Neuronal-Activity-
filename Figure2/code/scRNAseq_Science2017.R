@@ -1,7 +1,7 @@
 scRNAseq_analyzer <- function(args=c("/groups/ECBL/project_data/VTCRI_Methylome/scRNAseq.sharmi", "logUMI")) {
 
   # create an object of Seurat with normalization to 10000 (total counts)
-  # reference: https://davetang.org/muse/2017/08/01/getting-started-seurat/
+  # reference: https://satijalab.org/seurat/v3.1/mca.html
   # install.packages("Seurat", dependencies=TRUE, INSTALL_opts = c('--no-lock'))
   
   library(Seurat)
