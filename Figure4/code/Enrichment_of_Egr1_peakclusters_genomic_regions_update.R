@@ -28,6 +28,11 @@ for(ivar in 1:length(varnames)){
   }  
 }
 
+## alternate DO NOT DELETE
+#tmp = lapply(varnames, function(x) {ifelse(grepl("5pUTR|Intron|Promoter|Exon|3pUTR|Distal_promoter",x), list(ifelse(egr1.peak.ann.dat$gene.tables %in% x, x, 'null')),
+ # list(ifelse(egr1.peak.ann.dat$repeat. %in% x, x, 'null')))})
+#egr1.peak.ann.dat <- cbind.data.frame(egr1.peak.ann.dat, data.frame(matrix(unlist(tmp), nrow = nrow(egr1.peak.ann.dat)))); colnames(egr1.peak.ann.dat)[10:ncol(egr1.peak.ann.dat)]<- varnames
+
 ## remove extra columns
 egr1.peak.ann.dat <- egr1.peak.ann.dat[, !colnames(egr1.peak.ann.dat) %in% c('gene.tables','repeat.')]
 
