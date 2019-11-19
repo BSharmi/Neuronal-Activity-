@@ -59,7 +59,7 @@ for (iTF in 1:length(TFlist)){
   setwd(paste0(fpath,TFlist[iTF]))
   ## read meth matrix
   y <- read.table(paste0(TFlist[iTF],'_methylation.matrix.txt'), h=T, sep = '\t')
-  ## read.dms
+  ## read.dms. The filename dms here may be confusing. It means the dmrs that contain the motif sequences. so it is dmr and not dms
   dms.dat <- read.table(paste0(TFlist[iTF],'_dms.txt'), h=T, sep = '\t')
   #colnames(dms.dat) <- c('chrom', 'start', 'end')
   ## combine
