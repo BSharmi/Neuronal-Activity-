@@ -14,5 +14,5 @@ for ((idms=0;idms<=num_DMS-1;idms++)); do
 	## get name
 	outname=${name_DMS[idms]##*/}
 	## run recursive ETRM prediction 
-	sbatch --export=idir=$directory/$outname/,Hpath=/home/bsharmi6/HOMER_custom/,refpath=/home/bsharmi6/mm10bowtie2/mm10.fa,seqextractpath=/home/bsharmi6/MEME/sequence_extractor.pl,Rpath=/home/bsharmi6/NA_TF_project/R_scripts/ recursive_top_pval_mask_general.sbatch
+	sbatch --export=idir=$directory/$outname/,Hpath=/home/bsharmi6/HOMER_custom/,refpath=/home/bsharmi6/mm10bowtie2/mm10.fa,seqextractpath=/home/bsharmi6/MEME/sequence_extractor.pl,Rpath=/home/bsharmi6/NA_TF_project/R_scripts/ recursive_top_pval_general.sbatch
 done
