@@ -11,7 +11,7 @@ rm(list=ls())
 ## read each file
 #for (ifile in 1:length(filelist)){
 ## read the TF peak/motif/DMR input file
-out.dat = read.table('/home/bsharmi6/NA_TF_project/scMethylome/ETRMS_dev_cell_sc/mSst-2/maf/maf.txt', h=T)
+dat = read.table('/home/bsharmi6/NA_TF_project/scMethylome/ETRMS_dev_cell_sc/mSst-2/maf/maf.txt', h=T)
 #dat = out.dat[, c(1:3)]
 ## TF name
 #TF = filelist[ifile]
