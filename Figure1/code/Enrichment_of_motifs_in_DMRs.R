@@ -146,6 +146,7 @@ if(nrow(df.dat) > 2){
   png(paste0(fpath, "sixteen_neuron.TF.FC",".png"), type="cairo", width = 1100, height = 900);par(oma=c(8,1,1,10))#par(mai=c(5,0.2,0.2,5))#
   heatmap.2(as.matrix(log2(df.dat+0.2)), scale = "none", col = cols, hclustfun = function(x) hclust(x, method="ward.D2"), colRow=ann_colors, cexCol=3, cexRow=3, trace = "none", density.info = "none", key = F,dendrogram='none', Rowv=TRUE, Colv=TRUE,labRow = rownames(df.dat),
             sepwidth=c(0.5,0.08), offsetRow = 0.01, offsetCol = 0.01, pty = 'm',adjCol = c(1.0,0.5), adjRow = c(0.05, 0.3)) 
+  legend(y=0.29, x=0.05, xpd=TRUE, legend = seq(-2,2),col = colorRampPalette(c('green', 'white','red'))(5), lty= 1,lwd = 5, cex=1.7)
   dev.off()
 }else{
   cols <- colorRampPalette(c('green', 'white', 'red'))(100)
